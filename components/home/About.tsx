@@ -10,6 +10,7 @@ const About: NextPage = (): JSX.Element => {
       description:
         "Somos una comuidad, que nos interesa poder impulsar a las personas que comienzan en este mundo, y que quieran aprender a programar.",
       img: "/assets/img/about.svg",
+      
     },
     {
         title: "Objetivo de la comunidad",
@@ -22,10 +23,10 @@ const About: NextPage = (): JSX.Element => {
     }
   ];
   return (
-    <div className="w-full h-scree px-6 py-11 overflow-hidden bg-slate-600 z-50 rounded-t-xl grid gap-4 md:grid-cols-3   md:gap-1">
+    <div id="about" className="w-full h-scree px-6 py-11 overflow-hidden bg-slate-600 z-50 rounded-t-xl grid gap-4 md:grid-cols-3  md:flex  md:justify-around  md:gap-1">
      {
          dataAbout.map((item, index) => (
-            <CardAbout key={index} {...item} />
+            <CardAbout key={index} {...item} i={index} />
          ))
      }
     </div>

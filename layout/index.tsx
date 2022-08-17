@@ -7,7 +7,7 @@ type TProps = {
 
 const Layout: React.FC<TProps> = ({ children }): React.ReactElement => {
   return (
-    <div>
+    <div className="scroll-smooth">
       <Navbar />
       {children}
     </div>

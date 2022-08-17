@@ -8,8 +8,8 @@ const Navbar: React.FC = (): JSX.Element => {
         <Link href={"/"}>
           <a className="text-3xl cursor-pointer">🥬</a>
         </Link>
-        <div className="underline cursor-pointer flex align-middle">
-          <Link href={"/about"}>
+        <div className=" cursor-pointer text-slate-800 flex align-middle font-bold">
+          <Link href={"/#about"}>
             <a>About</a>
           </Link>
         </div>

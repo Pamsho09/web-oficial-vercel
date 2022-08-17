@@ -3,9 +3,9 @@ import Layout from "../layout";
 
 export default function Document(): JSX.Element {
   return (
-    <Html>
+    <Html className="scroll-smooth">
       <Head />
-      <body>
+      <body >
         <Main />
         <NextScript />
       </body>
