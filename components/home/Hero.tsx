@@ -2,15 +2,12 @@ import React from "react";
 import { gsap } from "gsap";
 import SplitText from "gsap/SplitText";
 import { useEffect, useRef, useState } from "react";
+import { useGsapFromTo, useGsapTo } from "../../hooks/useGsap";
 
 function random(minimo: number, maximo: number) {
   return Math.floor(Math.random() * (maximo + 1 - minimo) + minimo);
 }
 function Hero() {
-  const continerIcons = useRef<any>();
-  const icon = gsap.utils.selector(continerIcons);
-  const containertitle = useRef<any>();
-  const title = gsap.utils.selector(containertitle);
   const [sizes, setSizes] = useState<{
     width: number;
     height: number;
@@ -18,28 +15,19 @@ function Hero() {
     width: 0,
     height: 0,
   });
-  useEffect(() => {
-    const { offsetWidth: width, offsetHeight: height } = continerIcons.current;
-    setSizes({ width, height });
-  }, [continerIcons]);
-  useEffect(() => {
-    gsap.to(icon(".img"), {
-      ease: "power1.inOut",
-      duration: 0.8,
-      repeat: -1,
-      delay: (i) => i *  0.05,
-      repeatDelay:0,
-      y: sizes.height ,
-      opacity: 0,
-    
- 
-    })
-  }, [icon, sizes]);
-
-  useEffect(() => {
-    gsap.fromTo(
-      title(".line h1"),
-      {
+  const [continerIcons] = useGsapTo(".img", {
+    ease: "power1.inOut",
+    duration: 0.8,
+    repeat: -1,
+    delay: (i) => i * 0.05,
+    repeatDelay: 0,
+    y: sizes.height,
+    opacity: 0,
+  },sizes);
+  const [containertitle] = useGsapFromTo([
+    {
+      element: ".line h1",
+      from: {
         y: 120,
         ease: "power4.out",
         delay: 0.3,
@@ -48,7 +36,7 @@ function Hero() {
           amount: 0.3,
         },
       },
-      {
+      to: {
         y: 0,
         ease: "power4.out",
         delay: 1,
@@ -56,29 +44,34 @@ function Hero() {
         stagger: {
           amount: 0.3,
         },
-      }
-    );
-    gsap.fromTo(
-      title(".community h3"),
-      {
+      },
+    },
+    {
+      element: ".community h3",
+      from: {
         y: -100,
         ease: "power4.out",
         delay: 1.6,
       },
-      {
+      to: {
         y: 0,
         ease: "power4.out",
         delay: 1.6,
-      }
-    );
-  }, [title]);
+      },
+    },
+  ]);
+  useEffect(() => {
+    const { offsetWidth: width, offsetHeight: height } = continerIcons.current;
+    setSizes({ width, height });
+  }, [continerIcons]);
+
   return (
     <div className="w-full h-screen   ">
       <div
         ref={continerIcons}
         className="w-full fixed h-screen overflow-hidden -z-30"
       >
-        {[...new Array(Math.round(sizes.width*.01))].map((_, index) => (
+        {[...new Array(Math.round(sizes.width * 0.01))].map((_, index) => (
           <div
             key={index}
             style={{
@@ -92,13 +85,12 @@ function Hero() {
             className={"img"}
           >
             <img
-              src={"./icons/lettuce.svg" }
+              src={"./icons/lettuce.svg"}
               alt=""
               style={{
                 width: 100,
                 height: 100,
                 zIndex: -1,
-              
               }}
             />
           </div>
