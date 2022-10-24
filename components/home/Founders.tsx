@@ -12,17 +12,19 @@ function Founders() {
       desc: "texto mamon",
     },
     {
-        name: "Roberto (Beto) Cortés Monroy",
-        title:"Frontend developer on the path to become in full stack developerWatch my website and let's work together!"
-        ,
-        img:"https://media-exp1.licdn.com/dms/image/C4E03AQHcMcWapO7sCg/profile-displayphoto-shrink_400_400/0/1622769796359?e=1666224000&v=beta&t=vdv40LMhZYSTkyMxw-aplbmSJMf_k73VzytLcZqBuKE",
-        desc: "texto mamon",
-    }
+      name: "Roberto (Beto) Cortés Monroy",
+      title:
+        "Frontend developer on the path to become in ull stack developerWatch my website and let's work together!",
+      img: "https://media-exp1.licdn.com/dms/image/C4E03AQHcMcWapO7sCg/profile-displayphoto-shrink_400_400/0/1622769796359?e=1666224000&v=beta&t=vdv40LMhZYSTkyMxw-aplbmSJMf_k73VzytLcZqBuKE",
+      desc: "texto mamon",
+    },
   ];
 
   return (
     <div className="w-full h-scree px-6 py-11 overflow-hidden bg-slate-600 z-50 grid gap-16  grid-cols-1 md:flex  place-content-around justify-center flex-wrap  ">
-        <h1 className="font-bold text-2xl md:col-start-1 md:col-end-3 w-full text-white text-center">Fundadores de la comunidad</h1>
+      <h1 className="font-bold text-2xl md:col-start-1 md:col-end-3 w-full text-white text-center">
+        Fundadores de la comunidad
+      </h1>
       {founders.map((item, index) => (
         <CardFounders {...item} key={index} i={index} />
       ))}

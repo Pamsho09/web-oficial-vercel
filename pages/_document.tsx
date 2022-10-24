@@ -5,7 +5,7 @@ export default function Document(): JSX.Element {
   return (
     <Html className="scroll-smooth">
       <Head />
-      <body >
+      <body>
         <Main />
         <NextScript />
       </body>

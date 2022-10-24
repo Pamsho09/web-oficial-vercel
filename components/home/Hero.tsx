@@ -15,15 +15,19 @@ function Hero() {
     width: 0,
     height: 0,
   });
-  const [continerIcons] = useGsapTo(".img", {
-    ease: "power1.inOut",
-    duration: 0.8,
-    repeat: -1,
-    delay: (i) => i * 0.05,
-    repeatDelay: 0,
-    y: sizes.height,
-    opacity: 0,
-  },sizes);
+  const [continerIcons] = useGsapTo(
+    ".img",
+    {
+      ease: "power1.inOut",
+      duration: 0.8,
+      repeat: -1,
+      delay: (i) => i * 0.05,
+      repeatDelay: 0,
+      y: sizes.height,
+      opacity: 0,
+    },
+    sizes
+  );
   const [containertitle] = useGsapFromTo([
     {
       element: ".line h1",

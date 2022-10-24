@@ -2,12 +2,12 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const useGsapTo = (element: string, to: gsap.TweenVars,update?:any) => {
+const useGsapTo = (element: string, to: gsap.TweenVars, update?: any) => {
   const ref = useRef<any>();
   gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
     gsap.to(element, to);
-  }, [ref,update]);
+  }, [ref, update]);
 
   return [ref];
 };
@@ -24,12 +24,12 @@ const useGsapFrom = (element: string, from: gsap.TweenVars) => {
 
 const useGsapFromTo = (
   data:
-     { element: string; from: gsap.TweenVars; to: gsap.TweenVars }[]
+    | { element: string; from: gsap.TweenVars; to: gsap.TweenVars }[]
     | { element: string; from: gsap.TweenVars; to: gsap.TweenVars }
 ) => {
   const ref = useRef<any>();
   gsap.registerPlugin(ScrollTrigger);
-  console.log(data)
+  console.log(data);
   useEffect(() => {
     if (Array.isArray(data)) {
       data.forEach(({ element, from, to }) => {
