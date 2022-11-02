@@ -47,7 +47,7 @@ const Workshops = () => {
             key={i}
             className={
               i % 2
-                ? "cardW w-full flex items-end h-auto bg-white  gap-4  pl-3 justify-between  rounded shadow  flex-row-reverse rounded-tr-[50px]"
+                ? "cardW w-full  flex items-end h-auto bg-white  gap-4  pl-3 justify-between  rounded shadow  flex-row-reverse rounded-tr-[50px]"
                 : "cardW w-full flex h-auto bg-white  gap-4  pr-3  justify-between items-end rounded shadow  flex-row rounded-tl-[50px]"
             }
           >
