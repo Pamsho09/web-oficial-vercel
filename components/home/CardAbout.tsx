@@ -46,15 +46,18 @@ const CardAbout = ({ img, title, description, i }: IProps) => {
   ]);
 
   return (
-    <div className="w-full max-w-lg md:w-96 p-5  md:px-5 rounded-md relative flex flex-col bg-white shadow-md  card ">
-      <img
-        src={img}
-        className="w-80 h-80 md:w-[600px] h-auto object-fill"
-        ref={cardImgRef}
-        id={"img" + i}
-      />
-      <h1 className="font-bold">{title}</h1>
-      <p className="">{description}</p>
+    <div className="w-full relative max-w-lg md:w-96">
+      <div className="w-full max-w-lg md:w-96 p-5 h-full z-0 bg-gray-900 ml-0.5 mt-0.5 rounded-lg absolute left-0 top-0"></div>
+      <div className="w-full max-w-lg md:w-96 p-5  md:px-5 rounded-md relative flex flex-col bg-white shadow-md  card h-full border-gray-900 border-2 ">
+        <img
+          src={img}
+          className="w-80 h-80 md:w-[600px] h-auto object-fill"
+          ref={cardImgRef}
+          id={"img" + i}
+        />
+        <h1 className="font-bold">{title}</h1>
+        <p className="">{description}</p>
+      </div>
     </div>
   );
 };

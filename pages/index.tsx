@@ -6,11 +6,11 @@ import Workshops from "../components/home/workshops";
 
 const Home: NextPage = () => {
   return (
-    <div className="w-full">
+    <div className="w-full flex flex-1 flex-col">
       <Hero />
       <About />
       <Workshops />
-      <Founders />
+      {/* <Founders /> */}
 
     </div>
   );

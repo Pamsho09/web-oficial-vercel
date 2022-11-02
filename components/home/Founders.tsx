@@ -21,8 +21,8 @@ function Founders() {
   ];
 
   return (
-    <div className="w-full h-scree px-6 py-11 overflow-hidden bg-slate-600 z-50 grid gap-16  grid-cols-1 md:flex  place-content-around justify-center flex-wrap  ">
-      <h1 className="font-bold text-2xl md:col-start-1 md:col-end-3 w-full text-white text-center">
+    <div className="w-full h-scree px-6 py-11 overflow-hidden bg-white z-50 grid gap-16  grid-cols-1 md:flex  place-content-around justify-center flex-wrap  ">
+      <h1 className="font-bold text-2xl md:col-start-1 md:col-end-3 w-full text-slate-600 text-center">
         Fundadores de la comunidad
       </h1>
       {founders.map((item, index) => (

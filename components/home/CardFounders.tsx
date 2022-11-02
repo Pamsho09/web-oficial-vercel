@@ -45,9 +45,9 @@ function CardFounders({ ...item }: IPropsCardFounders) {
           <h1 className="font-bold text-xl">{item.name}</h1>
           <h3 className="font-normal text-gray-600">{item.title}</h3>
         </div>
-        <div>
+        {/* <div>
           <p className="text-gray-600">{item.desc}</p>
-        </div>
+        </div> */}
       </div>
     </div>
   );

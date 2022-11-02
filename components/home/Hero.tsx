@@ -70,7 +70,7 @@ function Hero() {
   }, [continerIcons]);
 
   return (
-    <div className="w-full h-screen   ">
+    <div className="w-full flex-1   relative ">
       <div
         ref={continerIcons}
         className="w-full fixed h-screen overflow-hidden -z-30"

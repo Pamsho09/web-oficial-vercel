@@ -27,9 +27,9 @@ const About: NextPage = (): JSX.Element => {
   return (
     <div
       id="about"
-      className="w-full h-scree px-6 py-11 overflow-hidden bg-slate-600 z-50 rounded-t-xl grid gap-4 md:grid-cols-3  md:flex  md:justify-around  md:gap-1 flex-wrap"
+      className="w-full h-scree px-6 py-11 overflow-hidden bg-white z-50 rounded-t-xl grid gap-8 md:grid-cols-3  md:flex  md:justify-around  md:gap-1 flex-wrap"
     >
-      <h1 className="font-bold text-2xl md:col-start-1 md:col-end-3 w-full text-white text-center mb-7">
+      <h1 className="font-bold text-5xl md:col-start-1 md:col-end-3 w-full text-slate-600 text-center mb-44">
         Sobre la comunidad
       </h1>
       {dataAbout.map((item, index) => (
